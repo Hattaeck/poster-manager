@@ -45,4 +45,19 @@ public class PosterManager {
         }
         return result;
     }
+
+    public void addAll(Movie[] newMovies) {
+        int totalLength = movies.length + newMovies.length;
+        Movie[] tmp = new Movie[totalLength];
+
+        for (int i = 0; i < movies.length; i++) {
+            tmp[i] = movies[i];
+        }
+
+        for (int i = 0; i < newMovies.length; i++) {
+            tmp[movies.length + i] = newMovies[i];
+        }
+
+        movies = tmp;
+    }
 }

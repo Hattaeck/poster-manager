@@ -80,21 +80,18 @@ class PosterManagerTest {
 
         Assertions.assertArrayEquals(expected, actual);
     }
+
+    @Test
+    public void shouldAddSeveralMoviesWithAddAll() {
+        Movie movie1 = new Movie("Бладшот", "боевик", "2020");
+        Movie movie2 = new Movie("Вперед", "мультфильм", "2020");
+        Movie[] moviesToAdd = {movie1, movie2};
+
+        manager.addAll(moviesToAdd);
+
+        Movie[] expected = {movie2, movie1};
+        Movie[] actual = manager.findLast();
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
 }
-
-
-
-
-
-
-
-
-
-
-//Movie movie1 = new Movie("Бладшот", "боевик");
-//Movie movie2 = new Movie("Вперед", "мультфильм");
-//Movie movie3 = new Movie("Отель Белград", "комедия");
-//Movie movie4 = new Movie("Джентельмены", "боевик");
-//Movie movie5 = new Movie("Человек-невидимка", "ужасы");
-//Movie movie6 = new Movie("Тролли. Мировой тур", "мультфильм");
-//Movie movie7 = new Movie("Номер один", "комедия");
