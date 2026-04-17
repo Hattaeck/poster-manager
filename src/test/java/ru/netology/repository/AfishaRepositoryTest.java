@@ -55,3 +55,5 @@ public class AfishaRepositoryTest {
         });
     }
 }
+
+//комент для пул реквеста тест
